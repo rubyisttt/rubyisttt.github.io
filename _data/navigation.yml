@@ -1,9 +1,64 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "About"
+  - title: "基于 Jekyll/Minimal Mistakes 编写教程"
+    url: /docs/quick-start-guide/
+  - title: "日志"
+    url: /blogs/
+  - title: "关于"
     url: /about/
+    
+docs:
+  - title: 新手上路
+    children:
+      - title: "快速上手指南"
+        url: /docs/quick-start-guide/
+      - title: "结构"
+        url: /docs/structure/
+      - title: "安装"
+        url: /docs/installation/
+      - title: "更新"
+        url: /docs/upgrading/
+  - title: 定制
+    children:
+      - title: "配置"
+        url: /docs/configuration/
+      - title: "覆盖主题默认设置"
+        url: /docs/overriding-theme-defaults/
+      - title: "导航"
+        url: /docs/navigation/
+      - title: "UI 文本"
+        url: /docs/ui-text/
+      - title: "作者"
+        url: /docs/authors/
+      - title: "版式"
+        url: /docs/layouts/
+  - title: 内容
+    children:
+      - title: "Post 用法"
+        url: /docs/posts/
+      - title: "Page 用法"
+        url: /docs/pages/
+      - title: "Collection 用法"
+        url: /docs/collections/
+      - title: "辅助方法"
+        url: /docs/helpers/
+      - title: "工具类"
+        url: /docs/utility-classes/
+  - title: 扩展
+    children:
+      - title: "样式表"
+        url: /docs/stylesheets/
+      - title: "JavaScript"
+        url: /docs/javascript/
+  - title: 元数据
+    children:
+      - title: "历史"
+        url: /docs/history/
+      - title: "贡献"
+        url: /docs/contributing/
+      - title: "旧版 2.2 文档"
+        url: /docs/docs-2-2/
+      - title: "许可"
+        url: /docs/license/
+      - title: "术语 &amp; 隐私政策"
+        url: /terms/
+

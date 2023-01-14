@@ -1,13 +1,13 @@
 ---
-title: "Structure"
+title: "框架结构"
 permalink: /docs/structure/
-excerpt: "How the theme is organized and what all of the files are for."
+excerpt: "主题是如何组织文件的。"
 last_modified_at: 2018-03-20T15:19:22-04:00
 ---
 
-Nothing clever here :wink:. Layouts, data files, and includes are all placed in their default locations. Stylesheets and scripts in `assets`, and a few development related files in the project's root directory.
+一切都是显而易见的:wink:。版式、数据文件和包含文件都放在它们应该在的默认位置。样式表和脚本在 `assets` 中，根目录还有一些开发相关的文件。
 
-**Please note:** If you installed Minimal Mistakes via the Ruby Gem method, theme files like `_layouts`, `_includes`, `_sass`, and `/assets/` will be missing. This is normal as they are bundled with the [`minimal-mistakes-jekyll`](https://rubygems.org/gems/minimal-mistakes-jekyll) Ruby gem. If you would like to make changes, create the files and Jekyll will prefer your local copy.
+**请注意：** 如果你通过 Ruby Gem 安装的 Minimal Mistakes，诸如 `_layouts`, `_includes`, `_sass` 的主题文件您时看不到的，`/assets/` 也会缺失。这是因为它们会被绑定在 [`minimal-mistakes-jekyll`](https://rubygems.org/gems/minimal-mistakes-jekyll) Ruby Gem 中。如果您想要做定制化修改，需要重新创建文件，Jekyll 会优先启用本地文件副本。
 {: .notice--info}
 
 ```bash

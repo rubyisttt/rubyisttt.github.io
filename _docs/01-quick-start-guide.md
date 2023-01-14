@@ -21,7 +21,7 @@ Minimal Mistakes 已开发更易使用的[基于 Gem 的主题](http://jekyllrb.
 
 如果您运行的是 Jekyll v3.7+ 并且可以自行托管，您可以选择使用基于 Gem 形式的主题。
 
-[^structure]: 查阅[**结构**页]({{ "/docs/structure/" | relative_url }})以浏览主题文件列表和它们的作用。
+[^structure]: 查阅[**框架结构**页]({{ "/docs/structure/" | relative_url }})以浏览主题文件列表和它们的作用。
 
 **专业提示：** 如果您复刻（Fork）了 Minimal Mistakes 主题，请确保删除 `/docs` 和 `/test` 文件夹。这些文件夹内是主题的文档和测试页，您可能不需要这些打乱您的代码库的信息。
 {: .notice--info}
@@ -163,9 +163,9 @@ Minimal Mistakes 已开发更易使用的[基于 Gem 的主题](http://jekyllrb.
 
 ### 迁移到 Gem 版本
 
-If you're migrating a site already using Minimal Mistakes and haven't customized any of the theme files things upgrading will be easier for you.
+如果您迁移一个已经使用了 Minimal Mistakes 主题并且没有做任何定制的站点相对比较容易。
 
-Start by removing the following folders and any files within them: 
+删除下列文件夹和文件：
 
 ```terminal
 ├── _includes
@@ -177,28 +177,28 @@ Start by removing the following folders and any files within them:
 |  └── js
 ```
 
-You won't need these anymore as they're bundled with the theme gem --- unless you intend to [override them](https://jekyllrb.com/docs/themes/#overriding-theme-defaults).
+因为这些文件已经绑定在主题的 Gem 中了，所以您不再需要它们了——除非您想要进行[定制化修改](https://jekyllrb.com/docs/themes/#overriding-theme-defaults)。
 
-**Note:** When clearing out the `assets` folder be sure to leave any files you've added and need. This includes images, CSS, or JavaScript that aren't already [bundled in the theme](https://github.com/mmistakes/minimal-mistakes/tree/master/assets). 
+**备注：** 清理 `assets` 文件夹时要确保删除您添加所有文件。这包括图像、CSS、JavaScript 等，这些文件[在主题 Gem 中已经绑定](https://github.com/mmistakes/minimal-mistakes/tree/master/assets).。
 {: .notice--warning}
 
-From `v4.5.0` onwards, the default language files are read-in automatically via the [`jekyll-data`](https://github.com/ashmaroli/jekyll-data) plugin if it's installed. For sites hosted with GitHub Pages, you still need to copy the [`_data/ui-text.yml`][ui-text.yml] file because the `jekyll-data` plugin [is unsupported on GitHub Pages](https://docs.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll#plugins).
+从 `v4.5.0` 开始，默认语言文件会通过 [`jekyll-data`](https://github.com/ashmaroli/jekyll-data) 插件（如果已经安装）自动读取。对于托管于 GitHub Pages 的站点，由于 `jekyll-data` 插件 [GitHub Pages 不支持](https://docs.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll#plugins)所以您需要复制 [`_data/ui-text.yml`][ui-text.yml] 文件。
 
-If you customized any of these files leave them alone, and only remove the untouched ones. If done correctly your modified versions should [override](https://jekyllrb.com/docs/themes/#overriding-theme-defaults) the versions bundled with the theme and be used by Jekyll instead.
+如果您已经定制修改了某些文件，那么就将其留下，将未修改文件删除。如果操作正确您修改的文件将[覆盖](https://jekyllrb.com/docs/themes/#overriding-theme-defaults)主题绑定的文件而被 Jekyll 使用。
 
 #### 升级 Gemfile
 
-Replace `gem "github-pages` or `gem "jekyll"` with `gem "jekyll", "~> 3.5"`. You'll need the latest version of Jekyll[^update-jekyll] for Minimal Mistakes to work and load all of the theme's assets properly, this line forces Bundler to do that.
+用 `gem "jekyll", "~> 3.5"` 替换 `gem "github-pages` 或者 `gem "jekyll"`。您需要最新版本的 Jekyll[^update-jekyll]，才能使 Minimal Mistakes 正常运行和正确加载所有主题资源文件，下面这行命令强制 Bundler 更新 Jekyll。
 
-[^update-jekyll]: You could also run `bundle update jekyll` to update Jekyll.
+[^update-jekyll]: 您也可以运行 `bundle update jekyll` 来升级 Jekyll。
 
-Add the Minimal Mistakes theme gem: 
+添加 Minimal Mistakes 主题 Gem： 
 
 ```ruby
 gem "minimal-mistakes-jekyll"
 ```
 
-When finished your `Gemfile` should look something like this:
+运行完成时您的 `Gemfile` 看起来应该这样：
 
 ```ruby
 source "https://rubygems.org"
@@ -207,11 +207,11 @@ gem "jekyll", "~> 3.7"
 gem "minimal-mistakes-jekyll"
 ```
 
-Then run `bundle update` and add `theme: minimal-mistakes-jekyll` to your `_config.yml`.
+然后运行 `bundle update`，添加 `theme: minimal-mistakes-jekyll` 到 `_config.yml`。
 
-**v4 Breaking Change:** Paths for image headers, overlays, teasers, [galleries]({{ "/docs/helpers/#gallery" | relative_url }}), and [feature rows]({{ "/docs/helpers/#feature-row" | relative_url }}) have changed and now require a full path. Instead of just `image: filename.jpg` you'll need to use the full path eg: `image: /assets/images/filename.jpg`. The preferred location is now `/assets/images/` but can be placed elsewhere or externally hosted. This applies to image references in `_config.yml` and `author.yml` as well.
+**v4 惊天大修改：** Image headers、Overlays、Teasers、[Galleries]({{ "/docs/helpers/#gallery" | relative_url }}) 和 [feature rows]({{ "/docs/helpers/#feature-row" | relative_url }}) 路径都已经修改，现在需要一个全的路径。过去是 `image: filename.jpg`，现在需要使用全的路径，例如：`image: /assets/images/filename.jpg`。预置路径现在是 `/assets/images/`，但是可以修改，甚至可以使用外部托管图像。这个图像引用在 `_config.yml` 和 `author.yml` 使用都是一样的。
 {: .notice--danger}
 
 ---
 
-That's it! If all goes well running `bundle exec jekyll serve` should spin-up your site.
+就这些！如果一切顺利，运行 `bundle exec jekyll serve` 应该就看到您的站点了。

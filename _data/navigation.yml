@@ -11,11 +11,11 @@ docs:
     children:
       - title: "快速上手指南"
         url: /docs/quick-start-guide/
-      - title: "结构"
+      - title: "框架结构"
         url: /docs/structure/
       - title: "安装"
         url: /docs/installation/
-      - title: "更新"
+      - title: "升级"
         url: /docs/upgrading/
   - title: 定制
     children:

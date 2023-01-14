@@ -1,4 +1,4 @@
-title: Rubyist 教程
+title: Rubyist Tutorials
 subtitle: Rubyist 原创教程
 email:
 description: Rubyist 的一套原创教程。
@@ -48,7 +48,7 @@ collections:
 author:
   name   : "Huang, Fei Long"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "不会写程序的厨子不是一个好的图书馆员"
+  bio    : "不会写程序的厨子不是一个好图书馆员"
   links:
     - label: "网站"
       icon: "fas fa-fw fa-link"

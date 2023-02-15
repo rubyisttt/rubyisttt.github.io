@@ -1,18 +1,18 @@
 ---
-title: "Navigation"
+title: "导航"
 permalink: /docs/navigation/
-excerpt: "Instructions on how to customize the main navigation and enabling breadcrumb links."
+excerpt: "如何定制主导航和启用面包屑链接的说明。"
 last_modified_at: 2018-03-20T15:59:40-04:00
 toc: true
 ---
 
-Customize site navigational links through a Jekyll data file.
+通过 Jekyll 的数据文件定制站点的导航链接。
 
-## Masthead
+## 主菜单
 
-The masthead links use a "priority plus" design pattern. Meaning, show as many navigation items that will fit horizontally with a toggle to reveal the rest.
+主菜单链接使用了“更多”设计模式。也就是说，根据水平宽度的不同，更多的菜单链接项会保存在一个可以展开的菜单中。
 
-To define these links add titles and URLs under the `main` key in `_data/navigation.yml`:
+定义这些链接，通过在 `_data/navigation.yml` 的 `main` 键下添加成对的 `title` 和 `url` 值即可：
 
 ```yaml
 main:
@@ -32,21 +32,21 @@ main:
     url: https://google.com
 ```
 
-Which will give you a responsive masthead similar to this:
+这将给您一个自适应的主菜单，例如：
 
 ![priority plus masthead animation]({{ "/assets/images/mm-priority-plus-masthead.gif" | relative_url }})
 
-Optionally, you can add a `description` key per title in the `main` key. This `description` will show up like a tooltip, when the user hovers over the link on a desktop browser.
+您还可以在 `main` 下选择为每个 `title` 添加一个 `description` 值——用于在用户鼠标光标悬停在桌面浏览器的链接上时显示一个提示信息。
 
-**ProTip:** Put the most important links first so they're always visible and not hidden behind the **menu toggle**.
+**专业提示：** 将最重要链接放在最前面，以便其一直显示，而不是藏在**菜单开关**里。
 {: .notice--info}
 
-## Breadcrumbs (beta)
+## 面包屑（测试）
 
-Enable breadcrumb links to help visitors better navigate deep sites. Because of the fragile method of implementing them they don't always produce accurate links reliably. For best results:
+启用面包屑链接可以更好的帮助访问者深层使用网站。由于实现该功能的方法并不是十分靠谱，所以生成的链接有时并不是很准确。所以，最好的做法是：
 
-1. Use a category based permalink structure e.g. `permalink: /:categories/:title/`
-2. Manually create pages for each category or use a plugin like [jekyll-archives](https://github.com/jekyll/jekyll-archives) to auto-generate them. If these pages don't exist breadcrumb links to them will be broken.
+1. 使用基于 Permalink 结构的分类，例如 `permalink: /:categories/:title/`
+2. 手动为每个分类创建 Page，或者使用诸如 [jekyll-archives](https://github.com/jekyll/jekyll-archives) 的插件自动生成。如果这些 Page 的面包屑链接不存在，系统将崩溃。
 
 ![breadcrumb navigation example]({{ "/assets/images/mm-breadcrumbs-example.jpg" | relative_url }})
 
@@ -54,20 +54,20 @@ Enable breadcrumb links to help visitors better navigate deep sites. Because of 
 breadcrumbs: true  # disabled by default
 ```
 
-Breadcrumb start link text and separator character can both be changed in `_data/ui-text.yml`.
+面包屑功能起始链接文本和分隔符可以在 `_data/ui-text.yml` 中修改。
 
 ```yaml
 breadcrumb_home_label : "Home"
 breadcrumb_separator  : "/"
 ```
 
-For breadcrumbs that resemble something like `Start > Blog > My Awesome Post` you'd apply these settings:
+像 `Start > Blog > My Awesome Post` 这样的面包屑链接您可以这样设置：
 
 ```yaml
 breadcrumb_home_label : "Start"
 breadcrumb_separator  : ">"
 ```
 
-## Custom sidebar navigation menu
+## 定制边栏导航菜单
 
-See the [**sidebars** documentation]({{ "/docs/layouts/#custom-sidebar-navigation-menu" | relative_url }}) for information on setting up a custom navigation menu.
+查阅[**边栏**文档]({{ "/docs/layouts/#custom-sidebar-navigation-menu" | relative_url }})获取设置定制的导航菜单相关信息。

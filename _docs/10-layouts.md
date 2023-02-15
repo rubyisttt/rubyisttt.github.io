@@ -568,11 +568,11 @@ header:
 
 ---
 
-## Sidebars
+## 边栏
 
 The space to the left of a page's main content is blank by default, but has the ability to show an author profile (name, short biography, social media links), custom content, or both.
 
-### Author profile
+### 作者简介
 
 Add `author_profile: true` to a post or page's YAML Front Matter.
 
@@ -631,7 +631,7 @@ For example, to color a Reddit icon, simply add a `color` declaration and the co
 
 ![Reddit link in author profile with color]({{ "/assets/images/mm-author-profile-reddit-color.png" | relative_url }})
 
-### Custom sidebar content
+### 定制边栏内容
 
 Blocks of content can be added by using the following under `sidebar`:
 
@@ -662,20 +662,20 @@ sidebar:
 **Note:** Custom sidebar content added to a post or page's YAML Front Matter will appear below the author profile if enabled with `author_profile: true`.
 {: .notice--info}
 
-### Custom sidebar navigation menu
+### 定制边栏导航菜单
 
-To create a sidebar menu[^sidebar-menu] similar to the one found in the theme's documentation pages you'll need to modify a `_data` file and some YAML Front Matter.
+创建一个边栏菜单[^sidebar-menu]同主题文档一样，需要修改 `_data` 文件和一些 YAML Front Matter。
 
-[^sidebar-menu]: Sidebar menu supports 1 level of nested links.
+[^sidebar-menu]: 边栏菜单支持 1 层嵌套链接。
 
 <figure>
   <img src="{{ '/assets/images/mm-custom-sidebar-nav.jpg' | relative_url }}" alt="sidebar navigation example">
   <figcaption>Custom sidebar navigation menu example.</figcaption>
 </figure>
 
-To start, add a new key to `_data/navigation.yml`. This will be referenced later via YAML Front Matter so keep it short and memorable. In the case of the theme's documentation menu I used `docs`.
+开始，要添加一个新的关键值到 `_data/navigation.yml`。稍后将通过 YAML Front Matter 引用，所以该值要简洁易记。像主题文档的菜单使用了 `docs`。
 
-**Sample sidebar menu links:**
+**示例边栏菜单链接：**
 
 ```yaml
 docs:
@@ -724,19 +724,19 @@ docs:
         url: /docs/javascript/
 ```
 
-Now you can pull these links into any page by adding the following YAML Front Matter.
+现在，您可以在任何 Page 通过添加下面 YAML Front Matter 来拉取这些链接。
 
 ```yaml
 sidebar:
   nav: "docs"
 ```
 
-**Note:** `nav: "docs"` references the `docs` key in `_data/navigation.yml` so make sure they match.
+**备注：** `nav: "docs"` 的 `docs` 是引用了 `_data/navigation.yml` 设定的该值，所以一定要确保它们匹配。
 {: .notice--info}
 
-If you're adding a sidebar navigation menu to several pages the use of Front Matter Defaults is a better option. You can define them in `_config.yml` to avoid adding it to every page or post.
+如果您需要对很多 Page 添加边栏导航菜单可以使用 Front Matter Defaults。您可以在 `_config.yml` 中定义它们，以避免在每个 Page 或者 Post 进行设定。
 
-**Sample sidebar nav default:**
+**示例边栏导航默认值设定：**
 
 ```yaml
 defaults:
@@ -751,7 +751,7 @@ defaults:
 
 ---
 
-## Social sharing links
+## 社会化分享链接
 
 The `single` layout has an option to enable social links at the bottom of posts for sharing on Twitter, Facebook, and LinkedIn. Similar to the links found in the author sidebar, the theme ships with defaults for the most common social networks.
 

@@ -11,13 +11,13 @@ toc: true
 **备注：** 基于技术原因，当使用 `jekyll serve` 时，`_config.yml` **不会**自动重新加载。如果您对该文件进行了任何修改，都需要重新启动服务器才能生效。
 {: .notice--warning}
 
-Take a moment to look over the configuration file included with the theme. Comments have been added to provide examples and default values for most settings. Detailed explanations of each can be found below.
+花点儿时间看一看主题内的配置文件，大多数配置选项都以注释的方式提供了示例和默认值，详细说明见下面文章。
 
 ## 站点设置
 
 ### 主题
 
-If you're using the Ruby gem version of the theme you'll need this line to activate it:
+如果您使用的是基于 Ruby Gem 版本的主题，您需要使用下面的代码激活：
 
 ```yaml
 theme: minimal-mistakes-jekyll
@@ -25,13 +25,13 @@ theme: minimal-mistakes-jekyll
 
 ### 款式
 
-Easily change the color scheme of the theme using one of the provided "skins":
+使用预置的“skins”可以很容易修改主题的颜色方案：
 
 ```yaml
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 ```
 
-**Note:** If you have made edits to the theme's CSS files be sure to update [`/assets/css/main.scss`](https://github.com/mmistakes/minimal-mistakes/blob/master/assets/css/main.scss) to include `@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin` before the `minimal-mistakes` import.
+**备注：** 如果您修改了主题的 CSS 文件，请确保更新 [`/assets/css/main.scss`](https://github.com/mmistakes/minimal-mistakes/blob/master/assets/css/main.scss) —— 在导入 `minimal-mistakes` 之前包含 `@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin`。
 {: .notice--warning}
 
 #### Air 款式： `air`
@@ -41,7 +41,7 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 <figure class="half">
     <a href="{{ site.baseurl }}/assets/images/air-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/air-skin-archive.png"></a>
     <a href="{{ site.baseurl }}/assets/images/air-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/air-skin-post.png"></a>
-    <figcaption>Calm and blue.</figcaption>
+    <figcaption>静谧，蓝色。</figcaption>
 </figure>
 
 #### Aqua 款式： `aqua`
@@ -49,7 +49,7 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 <figure class="half">
   <a href="{{ site.baseurl }}/assets/images/aqua-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/aqua-skin-archive.png"></a>
   <a href="{{ site.baseurl }}/assets/images/aqua-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/aqua-skin-post.png"></a>
-  <figcaption>Just like water.</figcaption>
+  <figcaption>平静如水。</figcaption>
 </figure>
 
 #### Contrast 款式： `contrast`
@@ -57,7 +57,7 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 <figure class="half">
   <a href="{{ site.baseurl }}/assets/images/contrast-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/contrast-skin-archive.png"></a>
   <a href="{{ site.baseurl }}/assets/images/contrast-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/contrast-skin-post.png"></a>
-  <figcaption>Retro feel with bold blue links and inverted footer.</figcaption>
+  <figcaption>拥有粗体蓝色链接和反转色系地脚的复古感。</figcaption>
 </figure>
 
 #### Dark 款式： `dark`
@@ -65,7 +65,7 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 <figure class="half">
   <a href="{{ site.baseurl }}/assets/images/dark-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/dark-skin-archive.png"></a>
   <a href="{{ site.baseurl }}/assets/images/dark-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/dark-skin-post.png"></a>
-  <figcaption>Inverted palette, white text on a dark background.</figcaption>
+  <figcaption>反转色系，黑底白字。</figcaption>
 </figure>
 
 #### Dirt 款式： `dirt`
@@ -73,7 +73,7 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 <figure class="half">
   <a href="{{ site.baseurl }}/assets/images/dirt-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/dirt-skin-archive.png"></a>
   <a href="{{ site.baseurl }}/assets/images/dirt-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/dirt-skin-post.png"></a>
-  <figcaption>Earthy tones.</figcaption>
+  <figcaption>乡土气息。</figcaption>
 </figure>
 
 #### Mint 款式： `mint`
@@ -83,7 +83,7 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 <figure class="half">
   <a href="{{ site.baseurl }}/assets/images/mint-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/mint-skin-archive.png"></a>
   <a href="{{ site.baseurl }}/assets/images/mint-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/mint-skin-post.png"></a>
-  <figcaption>Minty fresh green.</figcaption>
+  <figcaption>薄荷新绿。</figcaption>
 </figure>
 
 #### Neon 款式： `neon`
@@ -91,7 +91,7 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 <figure class="half">
   <a href="{{ site.baseurl }}/assets/images/neon-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/neon-skin-archive.png"></a>
   <a href="{{ site.baseurl }}/assets/images/neon-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/neon-skin-post.png"></a>
-  <figcaption>Inverted palette, white text on a dark background.</figcaption>
+  <figcaption>反转色系，暗底白字。</figcaption>
 </figure>
 
 #### Neon 款式： `plum`
@@ -99,7 +99,7 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 <figure class="half">
   <a href="{{ site.baseurl }}/assets/images/plum-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/plum-skin-archive.png"></a>
   <a href="{{ site.baseurl }}/assets/images/plum-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/plum-skin-post.png"></a>
-  <figcaption>Purple reigns supreme.</figcaption>
+  <figcaption>高贵典雅的紫色。</figcaption>
 </figure>
 
 #### Sunrise 款式： `sunrise`
@@ -107,53 +107,52 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 <figure class="half">
   <a href="{{ site.baseurl }}/assets/images/sunrise-skin-archive-large.png"><img src="{{ site.baseurl }}/assets/images/sunrise-skin-archive.png"></a>
   <a href="{{ site.baseurl }}/assets/images/sunrise-skin-post-large.png"><img src="{{ site.baseurl }}/assets/images/sunrise-skin-post.png"></a>
-  <figcaption>Oranges and red.</figcaption>
+  <figcaption>桔色和红色。</figcaption>
 </figure>
 
 ### 站点本地设置
 
-`site.locale` is used to declare the primary language for each web page within the site.
+`site.locale` 用于声明站点内每个页面使用的基本语言。
 
-_Example:_ `locale: "en-US"` sets the `lang` attribute for the site to the _United States_ flavor of English, while `en-GB` would be for the `United Kingdom` style of English. Country codes are optional and the shorter variation `locale: "en"` is also acceptable. To find your language and country codes check this [reference table](<https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx>).
+_示例：_ `locale: "en-US"` 为站点设置 `lang` 属性为 _美国_ 英语，而 `en-GB` 则表示使用的是`英国`英语。国家代码可选，省略如 `locale: "en"` 也是可以的。查找您的语言和国家代码请[参考表格](<https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx>)。
 
-Properly setting the locale is important for associating localized text found in the [**UI Text**]({{ "/docs/ui-text/" | relative_url }}) data file. An improper match will cause parts of the UI to disappear (eg. button labels, section headings, etc).
+正确设置 locale 很重要——因为它还关联 [**UI Text**]({{ "/docs/ui-text/" | relative_url }}) 数据文件中的本地化文本。不当的匹配可能会导致部分 UI 文本缺失（例如，按钮标签、栏目标题等）。
 
-**Note:** The theme comes with localized text in English (`en`, `en-US`, `en-GB`). If you change `locale` in `_config.yml` to something else, most of the UI text will go blank. Be sure to add the corresponding locale key and translated text to `_data/ui-text.yml` to avoid this.
+**备注：**主题自带英文（`en`、`en-US`、`en-GB`）本地化文本。如果您想修改 `_config.yml` 中 `locale`，大部分 UI 文本都会变成空白。要想避免这种情况，需要在 `_data/ui-text.yml` 中添加适当的键和对应的翻译文本。
 {: .notice--warning}
 
 ### 站点标题
 
-The name of your site. Is used throughout the theme in places like the site masthead and `<title>` tags.
+站点名字。通常出现在主题的站点名字的位置和 `<title>` 标签。
 
-_Example:_ `title: "My Awesome Site"`
+_示例：_ `title: "My Awesome Site"`
 
-You also have the option of customizing the separation character used in SEO-friendly page titles.
+您也可以定制对 SEO 友好的页面标题分隔符。
 
-_Example:_ `title_separator: "|"` would produce page titles like `Sample Page | My Awesome Site`.
+_示例：_ `title_separator: "|"` 会生成诸如 `Sample Page | My Awesome Site` 的页面标题。
 
-**Note:** Long site titles have been known to break the masthead layout. Avoid adding a long "tagline" to the title prevent this from happening eg. `My Awesome Site is the Best Because I Say So`.
+**备注：** 长的站点标题会破坏标题布局。所以尽量避免使用长的口号做为标题，例如 `My Awesome Site is the Best Because I Say So`。
 {: .notice--warning}
 
 ### 站点子标题
 
-A short tagline that appears below the title in site masthead.
+在站点标题下面使用的短的口号。
 
-_Example:_ `subtitle: "Version 2.0"`
+_示例：_ `subtitle: "Version 2.0"`
 
 ### 站点名字
 
-Used to assign a site author. Don't worry, you can override the site author with different ones on specific posts, pages, or collection documents.
+通常会设定一个站点的作者。不要着急，您可以在 post、page 和 collection 文档中通过设定来覆盖默认值。
+_示例：_ `name: "Michael Rose"`.
 
-_Example:_ `name: "Michael Rose"`.
-
-**ProTip:** If you want to get crafty with your YAML you can use [anchors](http://www.yaml.org/spec/1.2/spec.html#id2785586) to reuse values. For example `foo: &var "My String"` allows you to reuse `"My String"` elsewhere in `_config.yml` like so... `bar: *var`. You'll see a few examples of this in the provided Jekyll config.
+**专家提醒：** If you want to get crafty with your YAML you can use [anchors](http://www.yaml.org/spec/1.2/spec.html#id2785586) to reuse values. For example `foo: &var "My String"` allows you to reuse `"My String"` elsewhere in `_config.yml` like so... `bar: *var`. You'll see a few examples of this in the provided Jekyll config.
 {: .notice--info}
 
 ### 站点简介
 
 Fairly obvious. `site.description` describes the site. Used predominantly in meta descriptions for improving SEO.
 
-_Example:_ `description: "A flexible Jekyll theme for your blog or site with a minimalist aesthetic."`
+_示例：_ `description: "A flexible Jekyll theme for your blog or site with a minimalist aesthetic."`
 
 ### 站点 URL
 
@@ -161,7 +160,7 @@ The base hostname and protocol for your site. If you're hosting with GitHub Page
 
 GitHub Pages now [forces `https://` for new sites](https://help.github.com/articles/securing-your-github-pages-site-with-https/) so be mindful of that when setting your URL to avoid mixed-content warnings.
 
-**Note:** Jekyll 3.3 overrides this value with `url: http://localhost:4000` when running `jekyll serve` locally in development. If you want to avoid this behavior set `JEKYLL_ENV=production` to [force the environment](https://jekyllrb.com/docs/configuration/environments/) to production.
+**备注：** Jekyll 3.3 overrides this value with `url: http://localhost:4000` when running `jekyll serve` locally in development. If you want to avoid this behavior set `JEKYLL_ENV=production` to [force the environment](https://jekyllrb.com/docs/configuration/environments/) to production.
 {: .notice--warning}
 
 ### 站点基础 URL
@@ -172,7 +171,7 @@ In the case of the Minimal Mistakes demo site it's hosted on GitHub at <https://
 
 For more information on how to properly use `site.url` and `site.baseurl` as intended by the Jekyll maintainers, check [Parker Moore's post on the subject](https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/).
 
-**Note:** When using `baseurl` remember to include it as part of your path when testing your site locally. Values of `url:` and `baseurl: "/blog"` would make your local site visible at `http://localhost:4000/blog` and not `http://localhost:4000`.
+**备注：** When using `baseurl` remember to include it as part of your path when testing your site locally. Values of `url:` and `baseurl: "/blog"` would make your local site visible at `http://localhost:4000/blog` and not `http://localhost:4000`.
 {: .notice--warning}
 
 ### 站点代码库
@@ -362,7 +361,7 @@ defaults:
 
 If you add `comments: false` to a post's YAML Front Matter it will override the default and disable comments for just that post.
 
-**Note:** Comments are disabled by default in `development`. To enable when testing/building locally be sure to set
+**备注：** Comments are disabled by default in `development`. To enable when testing/building locally be sure to set
 `JEKYLL_ENV=production` to [force the environment](http://jekyllrb.com/docs/configuration/#specifying-a-jekyll-environment-at-build-time) to production.
 {: .notice--info}
 
@@ -388,7 +387,7 @@ comments:
     server: # meta.discourse.org
 ```
 
-**Note:** Do not include `http://` or `https://` when setting your Discourse `server`. The theme automatically prepends the URL `//`, following a scheme-less pattern.
+**备注：** Do not include `http://` or `https://` when setting your Discourse `server`. The theme automatically prepends the URL `//`, following a scheme-less pattern.
 {: .notice--info}
 
 #### Facebook 评论
@@ -412,7 +411,7 @@ To use utterances you will need to [install the app](https://github.com/apps/utt
 repository: # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 ```
 
-**Note:** Make sure the repo is public, otherwise your readers will not be able to view the issues/comments. The [issues feature](https://guides.github.com/features/issues/) also needs to be active on your repo.
+**备注：** Make sure the repo is public, otherwise your readers will not be able to view the issues/comments. The [issues feature](https://guides.github.com/features/issues/) also needs to be active on your repo.
 {: .notice--warning}
 
 To enable utterances on the front end set `comments.provider` and the color theme of the widget.
@@ -438,7 +437,7 @@ You'll need to ensure you've added the following to `_config.yml`:
 repository: # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 ```
 
-**Note:** Make sure the repo is public, otherwise your readers will not be able to view the issues/comments. The [discussions feature](https://docs.github.com/en/discussions) also needs to be active on your repo.
+**备注：** Make sure the repo is public, otherwise your readers will not be able to view the issues/comments. The [discussions feature](https://docs.github.com/en/discussions) also needs to be active on your repo.
 {: .notice--warning}
 
 To enable giscus on the front end set `comments.provider` and the other additional options.
@@ -459,10 +458,10 @@ comments:
 
 Transform user comments into `_data` files that live inside of your GitHub repository by enabling Staticman.
 
-**Note:** Looking to migrate comments from a WordPress based site? Give [this tool](https://github.com/arthurlacoste/wordpress-comments-jekyll-staticman) a try.
+**备注：** Looking to migrate comments from a WordPress based site? Give [this tool](https://github.com/arthurlacoste/wordpress-comments-jekyll-staticman) a try.
 {: .notice--info}
 
-**Note:** Please note that as of September 2018, Staticman is reaching GitHub API limits due to its popularity, and it is recommended by its maintainer that users deploy their own instances for production (use `site.staticman.endpoint`).  Consult the Staticman "[Get Started](https://staticman.net/docs/index.html)" guide for more info.
+**备注：** Please note that as of September 2018, Staticman is reaching GitHub API limits due to its popularity, and it is recommended by its maintainer that users deploy their own instances for production (use `site.staticman.endpoint`).  Consult the Staticman "[Get Started](https://staticman.net/docs/index.html)" guide for more info.
 {: .notice--warning}
 
 ##### Add Staticman as a collaborator on GitHub (legacy)
@@ -470,7 +469,7 @@ Transform user comments into `_data` files that live inside of your GitHub repos
 1. Allow Staticman push access to your GitHub repository by clicking on **Settings**, then the **Collaborators** tab and adding your GitHub bot as a collaborator.
 2. To accept the pending invitation visit: `https://{your Staticman v2/3 API}/v[2|3]/connect/{your GitHub username}/{your repository name}`.
 
-**Note:** The new GitHub App authentication method is recommended for GitHub repositories to avoid the API rate limit.
+**备注：** The new GitHub App authentication method is recommended for GitHub repositories to avoid the API rate limit.
 {: .notice--info}
 
 ##### Configure Staticman
@@ -529,7 +528,7 @@ comments:
 **Branch setting:** This is the branch comment files will be sent to via pull requests. If you host your site on GitHub Pages it will likely be `master` unless your repo is setup as a project --- use `gh-pages` in that case.
 {: .notice--info}
 
-**Note:** Staticman is currently compatible with GitHub and GitLab based repositories. [Support for GitLab Pages](https://github.com/eduardoboucas/staticman/issues/22) is already available at [Staticman v3](https://github.com/eduardoboucas/staticman/pull/219).
+**备注：** Staticman is currently compatible with GitHub and GitLab based repositories. [Support for GitLab Pages](https://github.com/eduardoboucas/staticman/issues/22) is already available at [Staticman v3](https://github.com/eduardoboucas/staticman/pull/219).
 {: .notice--warning}
 
 ###### Staticman v1 (deprecated)
@@ -564,7 +563,7 @@ By default comment moderation is enabled in `staticman.yml`. As new comments are
 
 To skip this moderation step simply set `moderation: false`.
 
-**ProTip:** Create a GitHub webhook that sends a `POST` request to the following payload URL `https://{your Staticman API URL}/v2/webhook` and triggers a "Pull request" event to delete Staticman branches on merge.
+**专家提醒：** Create a GitHub webhook that sends a `POST` request to the following payload URL `https://{your Staticman API URL}/v2/webhook` and triggers a "Pull request" event to delete Staticman branches on merge.
 {: .notice--info}
 
 ![pull-request webhook]({{ "/assets/images/mm-staticman-pr-webhook.jpg" | relative_url }})
@@ -596,7 +595,7 @@ atom_feed:
   path: "http://feeds.feedburner.com/youFeedname"
 ```
 
-**Note:** By default the site feed is linked in two locations: inside the [`<head>` element](https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html) and at the bottom of every page in the [site footer](https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html).
+**备注：** By default the site feed is linked in two locations: inside the [`<head>` element](https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/head.html) and at the bottom of every page in the [site footer](https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/footer.html).
 {: .notice--info}
 
 ### Disable Feed Icons
@@ -625,7 +624,7 @@ lunr:
   search_within_pages: true
 ```
 
-**Note:** Only the first 50 words of a post or page's body content is added to the Lunr search index. Setting `search_full_content` to `true` in your `_config.yml` will override this and could impact page load performance.
+**备注：** Only the first 50 words of a post or page's body content is added to the Lunr search index. Setting `search_full_content` to `true` in your `_config.yml` will override this and could impact page load performance.
 {: .notice--warning}
 
 #### Algolia
@@ -680,7 +679,7 @@ For faster and more relevant search ([see demo](https://mmistakes.github.io/mini
 
 To use the Algolia search with GitHub Pages hosted sites follow [this deployment guide](https://community.algolia.com/jekyll-algolia/github-pages.html). Or this guide for [deploying on Netlify](https://community.algolia.com/jekyll-algolia/netlify.html).
 
-**Note:** The Jekyll Algolia plugin can be configured in several ways. Be sure to check out [their full documentation](https://community.algolia.com/jekyll-algolia/options.html "Algolia configuration") on how to exclude files and other valuable settings.
+**备注：** The Jekyll Algolia plugin can be configured in several ways. Be sure to check out [their full documentation](https://community.algolia.com/jekyll-algolia/options.html "Algolia configuration") on how to exclude files and other valuable settings.
 {: .notice--info}
 
 #### Google Custom Search Engine
@@ -702,7 +701,7 @@ Add a Google search box to your site.
      search_engine_id: YOUR_SEARCH_ENGINE_ID
    ```
 
-**Note:** If your site is new and hasn't been indexed by Google yet, search will be incomplete and won't provide accurate results.
+**备注：** If your site is new and hasn't been indexed by Google yet, search will be incomplete and won't provide accurate results.
 {: .notice--info}
 
 ### SEO, social sharing, and analytics settings
@@ -713,7 +712,7 @@ All optional, but a good idea to take the time setting up to improve SEO and lin
 
 Formerly known as [Google Webmaster Tools](https://www.google.com/webmasters/tools/), add your [verification code](https://support.google.com/analytics/answer/1142414?hl=en) like so: `google_site_verification: "yourVerificationCode"`.
 
-**Note:** You likely won't have to do this if you verify site ownership through **Google Analytics** instead.
+**备注：** You likely won't have to do this if you verify site ownership through **Google Analytics** instead.
 {: .notice--warning}
 
 #### Bing Webmaster Tools
@@ -815,7 +814,7 @@ facebook:
   username: "michaelrose"  # https://www.facebook.com/michaelrose
 ```
 
-**ProTip:** To debug Open Graph data use [this tool](https://developers.facebook.com/tools/debug/) to test your pages. If content changes aren't reflected you will probably have to hit the **Scrape Again** button to refresh.
+**专家提醒：** To debug Open Graph data use [this tool](https://developers.facebook.com/tools/debug/) to test your pages. If content changes aren't reflected you will probably have to hit the **Scrape Again** button to refresh.
 {: .notice--info}
 
 ##### Open Graph default image
@@ -881,7 +880,7 @@ analytics:
 
 To use another provider not included with the theme set `provider: "custom"` then add their embed code to `_includes/analytics-providers/custom.html`.
 
-**Note:** Analytics are disabled by default in `development`. To enable when testing/building locally be sure to set
+**备注：** Analytics are disabled by default in `development`. To enable when testing/building locally be sure to set
 `JEKYLL_ENV=production` to [force the environment](http://jekyllrb.com/docs/configuration/#specifying-a-jekyll-environment-at-build-time) to production.
 {: .notice--info}
 
@@ -891,7 +890,7 @@ Used as the defaults for defining what appears in the author sidebar.
 
 ![author sidebar example]({{ "/assets/images/mm-author-sidebar-example.jpg" | relative_url }})
 
-**Note:** For sites with multiple authors these values can be overridden post by post with custom YAML Front Matter and a data file. For more information on how that works see below.
+**备注：** For sites with multiple authors these values can be overridden post by post with custom YAML Front Matter and a data file. For more information on how that works see below.
 {: .notice--info}
 
 ```yaml
@@ -914,7 +913,7 @@ Author links are all optional, include the ones you want visible under the `auth
 author:
   name: "Your Name"
   avatar: "/assets/images/bio-photo.jpg"
-  bio: "I am an **amazing** person." # Note: Markdown is allowed
+  bio: "I am an **amazing** person." # 备注： Markdown is allowed
   location: "Somewhere"
   links:
     - label: "Made Mistakes"
@@ -957,7 +956,7 @@ footer:
       url: "https://instagram.com/mmistakes"
 ```
 
-**Note:** Twitter and Facebook footer links no longer automatically pull from `site.twitter.username` and `site.facebook.username`. This behavior has been deprecated in favor of the `footer.links` array above.
+**备注：** Twitter and Facebook footer links no longer automatically pull from `site.twitter.username` and `site.facebook.username`. This behavior has been deprecated in favor of the `footer.links` array above.
 {: .notice--danger}
 
 To change "Follow:" text that precedes footer links, edit the `follow_label` key in `_data/ui-text.yml`.
@@ -1021,7 +1020,7 @@ And of course any default value can be overridden by settings in a post, page, o
 
 The default permalink style used by the theme is `permalink: /:categories/:title/`. If you have a post named `2016-01-01-my-post.md` with `categories: foo` in the YAML Front Matter, Jekyll will generate `_site/foo/my-post/index.html`.
 
-**Note:** If you plan on enabling breadcrumb links --- including category names in permalinks is a big part of how those are created.
+**备注：** If you plan on enabling breadcrumb links --- including category names in permalinks is a big part of how those are created.
 {: .notice--warning}
 
 ### 分页
@@ -1040,7 +1039,7 @@ The paginator only works on files with name `index.html`. To use pagination in a
 paginate_path: /recent/page:num/
 ```
 
-**Please note:** When using Jekyll's default [pagination plugin](https://jekyllrb.com/docs/pagination/) `paginator.posts` can only be called once. If you're looking for something more powerful that can paginate category, tag, and collection pages I suggest [**jekyll-paginate-v2**](https://github.com/sverrirs/jekyll-paginate-v2).
+**Please 备注：** When using Jekyll's default [pagination plugin](https://jekyllrb.com/docs/pagination/) `paginator.posts` can only be called once. If you're looking for something more powerful that can paginate category, tag, and collection pages I suggest [**jekyll-paginate-v2**](https://github.com/sverrirs/jekyll-paginate-v2).
 {: .notice--info}
 
 ### 时区
@@ -1071,7 +1070,7 @@ When hosting with GitHub Pages a small [set of gems](https://pages.github.com/ve
 
 If you're hosting elsewhere then you don't really have to worry about what is whitelisted as you are free to include whatever [Jekyll plugins](https://jekyllrb.com/docs/plugins/) you desire.
 
-**Note:** The [jekyll-include-cache](https://github.com/benbalter/jekyll-include-cache) plugin needs to be installed in your `Gemfile` and added to the `plugins` array of `_config.yml`. Otherwise you'll throw `Unknown tag 'include_cached'` errors at build.
+**备注：** The [jekyll-include-cache](https://github.com/benbalter/jekyll-include-cache) plugin needs to be installed in your `Gemfile` and added to the `plugins` array of `_config.yml`. Otherwise you'll throw `Unknown tag 'include_cached'` errors at build.
 {: .notice--warning}
 
 ## 归档设置
@@ -1082,7 +1081,7 @@ The theme ships with support for taxonomy (category and tag) pages. GitHub Pages
 
 The default `type` is set to use Liquid.
 
-**Note:** `category_archive` and `tag_archive` were previously named `categories` and `tags`. Names were changed to avoid possible conflicts with `site.categories` and `site.tags`.
+**备注：** `category_archive` and `tag_archive` were previously named `categories` and `tags`. Names were changed to avoid possible conflicts with `site.categories` and `site.tags`.
 {: .notice--danger}
 
 ```yaml
@@ -1096,7 +1095,7 @@ tag_archive:
 
 Which would create category and tag links in the breadcrumbs and page meta like: `/categories/#foo` and `/tags/#foo`.
 
-**Note:** these are simply hash (fragment) links into the full taxonomy index pages. For them to resolve properly, the category and tag index pages need to exist at [`/categories/index.html`](https://github.com/{{ site.repository }}/blob/master/docs/_pages/category-archive.md) (copy to `_pages/category-archive.md`) and [`/tags/index.html`](https://github.com/{{ site.repository }}/blob/master/docs/_pages/tag-archive.md) (copy to `_pages/tag-archive.md`).
+**备注：** these are simply hash (fragment) links into the full taxonomy index pages. For them to resolve properly, the category and tag index pages need to exist at [`/categories/index.html`](https://github.com/{{ site.repository }}/blob/master/docs/_pages/category-archive.md) (copy to `_pages/category-archive.md`) and [`/tags/index.html`](https://github.com/{{ site.repository }}/blob/master/docs/_pages/tag-archive.md) (copy to `_pages/tag-archive.md`).
 {: .notice--warning}
 
 If you have the luxury of using Jekyll Plugins, then [**jekyll-archives**][jekyll-archives] will create a better experience as discrete taxonomy pages would be generated, and their corresponding links would be "real" (not just hash/fragment links into a larger index). However, the plugin will not generate the taxonomy index pages (`category-archive.md` and `tag-archive.md`) so you'd still need to manually create them if you'd like to have them (see note above).
@@ -1132,7 +1131,7 @@ jekyll-archives:
     tag: /tags/:name/
 ```
 
-**Note:** The `archive-taxonomy` layout used by jekyll-archives is provided with the theme and can be found in the `_layouts` folder.
+**备注：** The `archive-taxonomy` layout used by jekyll-archives is provided with the theme and can be found in the `_layouts` folder.
 {: .notice--info}
 
 <div class="notice--success" markdown="1">
@@ -1177,5 +1176,5 @@ compress_html:
 **Caution:** Inline JavaScript comments can cause problems with `compress.html`, so be sure to `/* comment this way */` and avoid `// these sorts of comments`.
 {: .notice--warning}
 
-**Note:** CDN services such as CloudFlare provide optional automatic minification for HTML, CSS, and JavaScript. If you are serving your site via such a service and have minification enabled, this configuration might be redundant.
+**备注：** CDN services such as CloudFlare provide optional automatic minification for HTML, CSS, and JavaScript. If you are serving your site via such a service and have minification enabled, this configuration might be redundant.
 {: .notice--info}
